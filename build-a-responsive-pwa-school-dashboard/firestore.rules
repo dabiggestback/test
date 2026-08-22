@@ -1,0 +1,30 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedInAdmin() {
+      return request.auth != null
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // School-wide data is public to read, but only accounts provisioned as
+    // administrators in the Firebase console may create or update it.
+    match /dashboard/shared {
+      allow read: if true;
+      allow create, update: if isSignedInAdmin();
+      allow delete: if false;
+    }
+
+    // Each user can only check whether their own account is provisioned. These
+    // documents must be created and maintained in the Firebase console.
+    match /admins/{userId} {
+      allow get: if request.auth != null && request.auth.uid == userId;
+      allow list, create, update, delete: if false;
+    }
+
+    // No client access to any legacy or unapproved collections/documents.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

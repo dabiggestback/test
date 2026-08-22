@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#005a9c" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Knoll | Student Dashboard</title>
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h3M8 17h5"/></symbol>
+    <symbol id="i-focus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5zM15 3v5h5M8 13h8M8 17h6"/></symbol>
+    <symbol id="i-classroom" viewBox="0 0 24 24"><path d="M4 5h16v12H4z"/><path d="M8 21h8M12 17v4M7 9h10M7 12h6"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.8 1.8 0 0 0 .36 1.98l.06.06-2.12 2.12-.06-.06a1.8 1.8 0 0 0-1.98-.36 1.8 1.8 0 0 0-1.1 1.66v.1h-3v-.1A1.8 1.8 0 0 0 10.5 18.8a1.8 1.8 0 0 0-1.98.36l-.06.06-2.12-2.12.06-.06A1.8 1.8 0 0 0 6.76 15a1.8 1.8 0 0 0-1.66-1.1H5v-3h.1A1.8 1.8 0 0 0 6.76 9.8 1.8 1.8 0 0 0 6.4 7.82l-.06-.06 2.12-2.12.06.06a1.8 1.8 0 0 0 1.98.36A1.8 1.8 0 0 0 11.6 4.4v-.1h3v.1a1.8 1.8 0 0 0 1.1 1.66 1.8 1.8 0 0 0 1.98-.36l.06-.06 2.12 2.12-.06.06a1.8 1.8 0 0 0-.36 1.98 1.8 1.8 0 0 0 1.66 1.1h.1v3H21a1.8 1.8 0 0 0-1.6 1.1Z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4 8.8 8.8 0 1 0 20 15.2Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5h3v14H8zM13 5h3v14h-3z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-lunch" viewBox="0 0 24 24"><path d="M7 3v18M4 3v7a3 3 0 0 0 6 0V3M17 3v18M17 3c2.2 0 3 1.8 3 4v5h-3"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12M9 18a3 3 0 1 1-3-3 3 3 0 0 1 3 3Zm10-2a3 3 0 1 1-3-3 3 3 0 0 1 3 3Z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="m4 16.5-.8 4.3 4.3-.8L19 8.5 15.5 5zM13.8 6.7l3.5 3.5"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M14 6l6 6-6 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  </svg>
+
+  <section class="welcome" id="welcome">
+    <div class="welcome-art"><span class="sun"></span><span class="hill hill-one"></span><span class="hill hill-two"></span><span class="school-mark">PK</span></div>
+    <div class="welcome-copy"><p class="eyebrow">PLEASANT KNOLL MIDDLE SCHOOL</p><h1>Your day, <em>in sync.</em></h1><p class="intro">A calm place to see what’s next, focus on what matters, and make room to grow.</p>
+      <p class="choose-label">Choose your grade to get started</p>
+      <div class="grade-card-grid"><button class="grade-card" data-grade="6"><strong>6<sup>th</sup></strong><span>Grade</span><small>Set my schedule</small></button><button class="grade-card" data-grade="7"><strong>7<sup>th</sup></strong><span>Grade</span><small>Set my schedule</small></button><button class="grade-card" data-grade="8"><strong>8<sup>th</sup></strong><span>Grade</span><small>Set my schedule</small></button></div>
+      <p class="privacy-note">Your selected grade and dashboard are saved on this device.</p>
+    </div>
+  </section>
+
+  <div class="app hidden" id="app">
+    <aside class="sidebar">
+      <a class="brand" href="#top"><span>PK</span><div>Pleasant Knoll<small>STUDENT DASHBOARD</small></div></a>
+      <nav>
+        <button class="nav-item active" data-view="dashboard"><svg><use href="#i-home"/></svg><span>Today</span></button>
+        <button class="nav-item" data-view="schedule"><svg><use href="#i-clock"/></svg><span>Schedule</span></button>
+        <button class="nav-item" data-view="calendar"><svg><use href="#i-calendar"/></svg><span>Calendar</span></button>
+        <button class="nav-item" data-view="focus"><svg><use href="#i-focus"/></svg><span>Focus</span></button>
+        <button class="nav-item" data-view="notes"><svg><use href="#i-note"/></svg><span>Notes</span></button>
+        <button class="nav-item" data-view="classroom"><svg><use href="#i-classroom"/></svg><span>Classroom</span></button>
+      </nav>
+      <div class="sidebar-bottom"><button id="adminOpen" class="nav-item"><svg><use href="#i-settings"/></svg><span>Admin tools</span></button><button id="themeToggle" class="nav-item"><svg><use href="#i-moon"/></svg><span>Appearance</span></button><p>Made by AJ :3</p></div>
+    </aside>
+    <main id="top">
+      <header><button class="mobile-menu" id="mobileMenu" aria-label="Open navigation"><svg><use href="#i-menu"/></svg></button><div><p class="eyebrow" id="dateLine"></p><h2>Good morning, <span id="studentName">Knoll student</span> <span class="wave">✦</span></h2></div><div class="header-actions"><button class="icon-button" id="quickTheme" aria-label="Toggle color theme"><svg><use href="#i-moon"/></svg></button><button class="profile" id="profileButton"><span id="profileInitial">K</span></button></div></header>
+      <section class="announcement hidden" id="announcementBanner"><span class="announcement-dot"></span><p id="announcementText"></p></section>
+
+      <section id="dashboard" class="view active-view">
+        <div class="hero-grid"><article class="now-card card"><div class="now-top"><div><p class="label">RIGHT NOW</p><h3 id="currentClass">School day hasn’t started</h3><p id="currentTimeRange">Your first class begins at 8:10 AM</p></div><div class="clock" id="clock"></div></div><div class="progress-track"><span id="periodProgress"></span></div><div class="now-bottom"><span id="nowStatus">Up next: Homeroom</span><span id="countdown"></span></div></article>
+          <article class="next-card card"><p class="label">UP NEXT</p><div class="next-icon"><svg><use href="#i-clock"/></svg></div><h3 id="nextClass">Homeroom</h3><p id="nextClassTime">8:10 - 8:13 AM</p><button class="text-button" data-go="schedule">View schedule <svg><use href="#i-arrow"/></svg></button></article></div>
+        <div class="dashboard-grid">
+          <article class="card schedule-card"><div class="card-heading"><div><p class="label">TODAY’S FLOW</p><h3>Your schedule</h3></div><button class="chip" id="gradeChip">7th grade</button></div><div id="scheduleList" class="schedule-list"></div><button class="text-button full" data-go="schedule">See full schedule <svg><use href="#i-arrow"/></svg></button></article>
+          <div class="right-stack"><article class="card break-card"><div class="card-heading"><div><p class="label">LOOKING FORWARD TO</p><h3 id="breakTitle">No break scheduled</h3></div><span class="leaf">✦</span></div><div class="break-count"><strong id="breakDays">—</strong><span id="breakDaysText">set a break<br>in admin</span></div><p id="breakDate">Your next school break will appear here.</p><div class="mini-dots"><i></i><i></i><i class="active"></i><i></i><i></i></div></article></div>
+          <article class="card goals-card"><div class="card-heading"><div><p class="label">MY INTENTIONS</p><h3>Goals for today</h3></div><button class="add icon-only" id="addGoal" aria-label="Add goal"><svg><use href="#i-plus"/></svg></button></div><div id="goalsList"></div></article>
+          <article class="card events-card"><div class="card-heading"><div><p class="label">COMING UP</p><h3>School calendar</h3></div><button class="text-button" data-go="calendar">All events</button></div><div id="eventList"></div></article>
+          <article class="card quick-links-card"><div class="card-heading"><div><p class="label">GO TO</p><h3>Quick Links</h3></div></div><div class="quick-links"><a href="https://fortmill.powerschool.com/public/home.html" target="_blank" rel="noopener noreferrer"><span class="service-logo powerschool-logo"><img src="https://www.powerschool.com/favicon.ico" alt="PowerSchool logo"></span><span>PowerSchool</span><svg><use href="#i-arrow"/></svg></a><a href="https://classroom.google.com/" target="_blank" rel="noopener noreferrer"><span class="service-logo classroom-logo"><img src="https://ssl.gstatic.com/classroom/favicon.png" alt="Google Classroom logo"></span><span>Google Classroom</span><svg><use href="#i-arrow"/></svg></a><a href="https://login.classlink.com/my/fortmill" target="_blank" rel="noopener noreferrer"><span class="service-logo classlink-logo"><img src="https://login.classlink.com/favicon.ico" alt="ClassLink logo"></span><span>ClassLink Launchpad</span><svg><use href="#i-arrow"/></svg></a></div></article>
+          <article class="card lunch-card"><div class="card-heading"><div><p class="label">CAFETERIA</p><h3>Lunch menu</h3></div><span class="lunch-icon"><svg><use href="#i-lunch"/></svg></span></div><div id="lunchToday" class="lunch-today"></div><div id="lunchUpcoming" class="lunch-upcoming-list"></div></article>
+          <article class="card study-music-card" id="musicWidget"><div class="card-heading"><div><p class="label">STUDY MUSIC</p><h3>Subwoofer Lullaby</h3><p>Local study soundtrack</p></div><span class="music-icon"><svg><use href="#i-music"/></svg></span></div><div class="music-controls"><button class="play" id="musicToggle" aria-label="Play study music"><svg><use href="#i-play"/></svg></button><div class="music-track"><input id="musicProgress" type="range" min="0" max="0" value="0" aria-label="Song progress"><span id="musicTime">0:00 / 0:00</span></div></div><div class="music-volume"><span>Volume</span><input id="musicVolume" type="range" min="0" max="100" step="5" value="35" aria-label="Music volume"></div><audio id="studyMusic" src="music/lullaby.mp3.mp3" preload="metadata" loop></audio></article>
+        </div>
+      </section>
+
+      <section id="schedule" class="view"><div class="page-title"><div><p class="eyebrow">PLEASANT KNOLL · 2026–27</p><h2>Bell schedule</h2></div><div class="grade-tabs"><button data-schedule-grade="6">6th</button><button data-schedule-grade="7" class="selected">7th</button><button data-schedule-grade="8">8th</button></div></div><article class="card full-schedule"><div class="schedule-legend"><span><i class="dot current"></i> Current period</span><span><i class="dot"></i> School day</span></div><div id="fullSchedule"></div></article></section>
+      <section id="calendar" class="view"><div class="page-title"><div><p class="eyebrow">STAY IN THE LOOP</p><h2>Calendar</h2></div><button class="primary-button compact" id="addEvent"><svg><use href="#i-plus"/></svg> Add personal event</button></div><div class="calendar-layout"><article class="card month-card"><div class="month-head"><button aria-label="Previous month">‹</button><h3 id="monthName"></h3><button aria-label="Next month">›</button></div><div class="weekdays">Sun Mon Tue Wed Thu Fri Sat</div><div id="monthGrid" class="month-grid"></div></article><article class="card agenda"><p class="label">UPCOMING</p><h3>On the horizon</h3><div id="agendaList"></div></article></div></section>
+      <section id="focus" class="view"><div class="page-title"><div><p class="eyebrow">A LITTLE ROOM TO BREATHE</p><h2>Focus space</h2></div></div><article class="focus-card"><div class="focus-orb"><span id="timerDisplay">25:00</span><small id="timerMode">FOCUS</small></div><div class="timer-controls"><button id="timerStart" class="primary-button">Start focus</button><button id="timerReset" class="outline-button">Reset</button></div><div class="focus-settings"><label>Focus <input id="focusMinutes" type="number" min="1" max="90" value="25" /> min</label><label>Break <input id="breakMinutes" type="number" min="1" max="30" value="5" /> min</label></div></article></section>
+      <section id="notes" class="view"><div class="page-title"><div><p class="eyebrow">CAPTURE THE THOUGHT</p><h2>My notes</h2></div><span class="saved" id="saveStatus">Saved locally</span></div><textarea id="notesArea" class="notes-area" placeholder="Write anything you want to remember…"></textarea></section>
+      <section id="classroom" class="view">
+        <div class="page-title">
+          <div><p class="eyebrow">YOUR SCHOOLWORK</p><h2>Google Classroom</h2><p>See your classes and upcoming assignments in one place.</p></div>
+          <div class="classroom-actions"><button class="outline-button" id="classroomRefresh">Refresh</button><a class="outline-button classroom-signout hidden" id="classroomSignOut" href="/auth/logout">Sign out</a></div>
+        </div>
+        <div id="classroomStatus" class="card classroom-status">
+          <div class="classroom-empty">
+            <div class="classroom-logo-large">G</div>
+            <h3>Connect Google Classroom</h3>
+            <p>Sign in with Google to bring your Classroom courses and assignments into Knoll.</p>
+            <a class="primary-button classroom-connect" href="/auth/google">Sign in with Google</a>
+            <p class="classroom-note">Knoll only requests read-only Classroom access. Your Google password is never shared with Knoll.</p>
+          </div>
+        </div>
+        <div id="classroomContent" class="hidden">
+          <div class="classroom-grid">
+            <article class="card"><div class="card-heading"><div><p class="label">YOUR CLASSES</p><h3>Courses</h3></div></div><div id="classroomCourses"></div></article>
+            <article class="card"><div class="card-heading"><div><p class="label">UPCOMING</p><h3>Assignments</h3></div></div><div id="classroomAssignments"></div></article>
+          </div>
+        </div>
+      </section>
+      <section id="admin" class="view"><div class="page-title admin-title"><div><p class="eyebrow">SCHOOL SETTINGS</p><h2>Admin dashboard</h2><p>Authorized changes publish to every student dashboard.</p></div><button class="outline-button" id="adminLock">Lock admin</button></div><div class="admin-stats"><article><strong id="adminEventCount">0</strong><span>School events</span></article><article><strong id="adminBreakCount">0</strong><span>School breaks</span></article><article><strong id="adminBellCount">0</strong><span>Bell periods</span></article><article><strong id="adminAnnouncementCount">0</strong><span>Announcements</span></article></div><div class="admin-tabs"><button class="active" data-admin-tab="events">Calendar</button><button data-admin-tab="bells">Bell schedules</button><button data-admin-tab="breaks">Break dates</button><button data-admin-tab="lunch">Lunch menu</button><button data-admin-tab="announcements">Announcements</button></div><article class="card admin-workspace"><div id="adminWorkspace"></div></article></section>
+      <footer>Made by AJ :3</footer>
+    </main>
+  </div>
+  <div class="modal hidden" id="modal"><div class="modal-box"><button class="close" id="modalClose" aria-label="Close"><svg><use href="#i-close"/></svg></button><div id="modalContent"></div></div></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
